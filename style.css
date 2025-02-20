@@ -13,6 +13,11 @@ body {
     background-color: #000000;
 }
 
+.main {
+    position: relative;
+    background-color: #000000;    
+}
+
 :root {
     --heading: #FFB2B2;
     --background: #000000;
@@ -20,6 +25,44 @@ body {
     --button: #33087D;
     --font-color: rgba(255, 255, 255, 0.815);
 }
+
+.loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.loader-div {
+    height: 40%;
+    width: 60%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  
+    overflow: hidden;  
+}
+
+.loader-div h1 {
+    font-size: 14vh;  
+    overflow: hidden;     
+}
+
+.loader-div h1 span {
+    display: inline-block;
+    color: var(--heading);
+}
+
+.loader-div h2 {
+    font-size: 7vh;
+    color: white;
+}
+
 
 .home-page {
     min-height: 100vh;
@@ -60,7 +103,7 @@ nav h1::after {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     border-radius: 50%; 
-    transition: all linear 0.5s;  
+    transition: all linear 0.3s;  
     z-index: -1;
 }
 
@@ -124,7 +167,7 @@ nav .options {
     animation-duration: 15s;
     animation-timing-function: linear; 
     animation-iteration-count: infinite;
-    animation-direction: alternate;        
+    animation-direction: alternate;          
 }
 
 @keyframes anime {
@@ -151,7 +194,7 @@ nav .options {
 
 .heading h1 {
     color: var(--heading);
-    font-size: 6rem;
+    font-size: 6rem;    
 }
 
 .para {
@@ -173,12 +216,16 @@ nav .options {
     height: 40vh; 
     width: 100%;    
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
 .moving-text {
     white-space: nowrap;
     overflow: auto;
+    /* background-color: beige;  */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;    
 }
 
 .moving-text::-webkit-scrollbar {
@@ -195,7 +242,11 @@ nav .options {
 
 .con {    
     white-space: nowrap; 
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center; 
+    gap: 10px;   
+    align-items: center;
     animation-name: move;
     animation-duration: 15s;
     animation-timing-function: linear; 
@@ -208,6 +259,16 @@ nav .options {
     font-weight: 100;
     letter-spacing: 1px;
 }
+.con i {
+    height: 40px;
+    width: 40px;
+    background-color: var(--heading);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8vh; 
+    padding: 1.6vh;     
+}
+
 
 @keyframes move {
     from {
@@ -552,4 +613,79 @@ nav .options {
 }
 
 /* footer part  */
+
+footer {
+    min-height: 80vh;
+    width: 100%;
+    background-color: white;    
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    margin-top: 20vh;
+}
+
+.footer-nav {
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+
+.footer-nav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav ul a {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.671);
+    text-decoration: none;
+}
+
+.footer-middle {
+    height: 75vh;
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-middle-left {
+    height: 100%;
+    width: 45%;    
+}
+
+.footer-middle-left h1 {
+    font-size: 7rem;
+    font-weight: 300;
+    margin: 9vh 0 10vh 17vh;
+    line-height: 0.9;
+}
+
+.footer-middle-left a {
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 17vh;
+}
+
+.footer-middle-right {
+    height: 100%;
+    width: 45%;     
+    position: relative;      
+}
+
+#footer-middle-image {
+    position: absolute;
+    height: 110%;    
+    width: 80%;    
+    background-image: url(/assets/vecteezy_3d-male-character-sitting-on-a-sofa-and-working-on-a-laptop_24785818.png);
+    background-position: center;
+    background-size: cover;
+    top: -100px;
+    left: -40px;
+}
+
+
 
