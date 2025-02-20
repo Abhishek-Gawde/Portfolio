@@ -149,6 +149,154 @@ function loaderAnimation() {
 
 loaderAnimation();
 
+function scrollTrigger() {
+  gsap.from(".scroller", {
+    y: 80,
+    duration: 2,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".scroller",
+      scroll: "body", 
+      start: "top 80%"     
+    }
+  })
+
+  gsap.from(".projects h1", {
+    x: -80, 
+    duration: 1, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".projects h1", 
+      scroll: "body",
+      start: "top 70%"      
+    }
+  })
+
+  gsap.from(".project-box1", {
+    y: 80, 
+    duration: 1.5, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".project-box1", 
+      scroll: "body",
+      start: "top 70%"          
+    }
+  })
+
+  gsap.from(".description1", {
+    y: 80, 
+    duration: 1.5, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".description1", 
+      scroll: "body",
+      start: "top 70%"          
+    }
+  })
+  
+  gsap.from(".project-box3", {
+    y: 80, 
+    duration: 1.5, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".project-box3", 
+      scroll: "body",
+      start: "top 70%"          
+    }
+  })
+
+  gsap.from(".description2", {
+    y: 80, 
+    duration: 1.5, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".description2", 
+      scroll: "body",
+      start: "top 70%"          
+    }
+  })
+
+  gsap.from(".skills h1", {
+    y: 80, 
+    duration: 1, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".skills h1", 
+      scroll: "body",
+      start: "top 75%"      
+    }
+  })
+
+  gsap.from(".skills-box", {
+    y: 80, 
+    duration: 2, 
+    opacity: 0,
+    stagger: 0.3, 
+    scrollTrigger: {
+      trigger: ".skills-box", 
+      scroll: "body",
+      start: "top 75%"      
+    }
+  })
+
+  gsap.from(".about-me h1", {
+    y: 80, 
+    duration: 1, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".about-me h1", 
+      scroll: "body",
+      start: "top 75%"      
+    }
+  })
+
+  gsap.from(".left-box", {
+    x: -80, 
+    duration: 2, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".left-box", 
+      scroll: "body",
+      start: "top 70%"      
+    }
+  })
+
+  gsap.from(".right-top", {
+    x: 80, 
+    duration: 2, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".right-top", 
+      scroll: "body",
+      start: "top 70%"      
+    }
+  })
+
+  gsap.from(".right-bottom", {
+    x: 80, 
+    duration: 2, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".right-bottom", 
+      scroll: "body",
+      start: "top 95%"      
+    }
+  })
+
+  gsap.from(".about-box2-bottom", {
+    y: 80, 
+    duration: 2, 
+    opacity: 0, 
+    scrollTrigger: {
+      trigger: ".about-box2-bottom", 
+      scroll: "body",
+      start: "top 75%"      
+    }
+  })
+}
+
+scrollTrigger();
+
 
 
  
