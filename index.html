@@ -8,17 +8,21 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="cursor"></div>
-    <div class="main">
-      <div class="loader">
-        <div class="loader-div">
-          <h1>Abhishek Gawde's</h1>
-          <h2>Portfolio</h2>
-        </div>
+    <div class="loader">
+      <div class="loader-div">
+        <h1>Abhishek Gawde's</h1>
+        <h2>Portfolio</h2>
       </div>
+    </div>
+    <div class="main">
       <div class="home-page">
         <nav>
           <h1>AG</h1>
@@ -49,34 +53,33 @@
         <div class="moving-text">
           <div class="con">
             <h1>Think</h1>
-            <i class="ri-arrow-right-line"></i>            
+            <i class="ri-arrow-right-line"></i>
             <h1>Design</h1>
-            <i class="ri-arrow-right-line"></i>            
+            <i class="ri-arrow-right-line"></i>
             <h1>Develop</h1>
-            <i class="ri-arrow-right-line"></i>            
+            <i class="ri-arrow-right-line"></i>
             <h1>Maintain</h1>
-            <i class="ri-arrow-right-line"></i>            
+            <i class="ri-arrow-right-line"></i>
           </div>
           <div class="con">
             <h1>Think</h1>
-            <i class="ri-arrow-right-line"></i>            
-            <h1>Design</h1> 
-            <i class="ri-arrow-right-line"></i>           
-            <h1>Develop</h1> 
-            <i class="ri-arrow-right-line"></i>           
+            <i class="ri-arrow-right-line"></i>
+            <h1>Design</h1>
+            <i class="ri-arrow-right-line"></i>
+            <h1>Develop</h1>
+            <i class="ri-arrow-right-line"></i>
             <h1>Maintain</h1>
             <i class="ri-arrow-right-line"></i>
-            
           </div>
           <div class="con">
-            <h1>Think</h1> 
-            <i class="ri-arrow-right-line"></i>           
-            <h1>Design</h1> 
-            <i class="ri-arrow-right-line"></i>           
-            <h1>Develop</h1> 
-            <i class="ri-arrow-right-line"></i>           
-            <h1>Maintain</h1> 
-            <i class="ri-arrow-right-line"></i>           
+            <h1>Think</h1>
+            <i class="ri-arrow-right-line"></i>
+            <h1>Design</h1>
+            <i class="ri-arrow-right-line"></i>
+            <h1>Develop</h1>
+            <i class="ri-arrow-right-line"></i>
+            <h1>Maintain</h1>
+            <i class="ri-arrow-right-line"></i>
           </div>
         </div>
       </div>
@@ -84,7 +87,7 @@
       <div class="projects">
         <h1>Projects</h1>
         <div class="project-box">
-          <div class="project-box1">
+          <div class="project-box1" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
             <video src="/assets/sundown.mp4" autoplay muted loop>Sundown</video>
           </div>
           <div class="description1">
@@ -104,7 +107,7 @@
           </div>
         </div>
         <div class="project-box">
-          <div class="project-box3" id="project-box2">
+          <div class="project-box3" id="project-box2" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
             <video src="/assets/responsive.mp4" autoplay muted loop>
               Sundown
             </video>
@@ -127,7 +130,7 @@
         </div>
       </div>
 
-      <div class="skills">
+      <div class="skills" data-scroll-speed="0.2" data-scroll-direction="vertical">
         <h1>Skills</h1>
         <div class="skills-container">
           <div class="skills-box" id="skills-box1">
@@ -262,13 +265,22 @@
         </div>
       </div>
 
-      <footer>  
-                 
-      </footer>
+      <footer></footer>
     </div>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
