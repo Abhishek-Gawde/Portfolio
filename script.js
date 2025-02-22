@@ -1,4 +1,193 @@
 let tl = gsap.timeline();
+let main = document.querySelector(".main");
+let cursor = document.querySelector(".cursor");
+let heading = document.querySelector(".heading");
+let para = document.querySelector(".para");
+let scroller_h1 = document.querySelector(".scroller .moving-text");
+let project1 = document.querySelector(".project-box .project-box1");
+let project2 = document.querySelector(".project-box .project-box3");
+let description2 = document.querySelector(".description2");
+let description1 = document.querySelector(".description1");
+let skills_container = document.querySelector(".skills-container");
+let about_me = document.querySelector(".about-box");
+let about_me2 = document.querySelector(".about-box2");
+
+function cursor1() {
+  main.addEventListener("mousemove", function(dets) {
+    gsap.to(cursor, {
+        x: dets.x,
+        y: dets.y,
+        duration: 1        
+    })
+  })
+  
+  heading.addEventListener("mouseenter", function() {
+    gsap.to(cursor, { 
+      mixBlendMode: "difference",   
+      scale: 3,    
+      ease: Power4
+    })
+  })
+  
+  heading.addEventListener("mouseleave", function() {
+    gsap.to(cursor, { 
+      mixBlendMode: "normal",    
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  para.addEventListener("mouseenter", function() {
+    gsap.to(cursor, { 
+      mixBlendMode: "difference",   
+      scale: 3,    
+      ease: Power4
+    })
+  })
+  
+  para.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  scroller_h1.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  scroller_h1.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  project1.addEventListener("mouseenter", function() {
+    cursor.innerHTML = "view more";
+    gsap.to(cursor, { 
+      mixBlendMode: "difference",         
+      scale: 3,    
+      ease: Power4
+    })  
+  })
+  
+  project1.addEventListener("mouseleave", function() {
+    cursor.innerHTML = "";
+    gsap.to(cursor, { 
+      mixBlendMode: "normal",          
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  project2.addEventListener("mouseenter", function() {
+    cursor.innerHTML = "view more";
+    gsap.to(cursor, { 
+      mixBlendMode: "difference",         
+      scale: 3,    
+      ease: Power4
+    })  
+  })
+  
+  project2.addEventListener("mouseleave", function() {
+    cursor.innerHTML = "";
+    gsap.to(cursor, { 
+      mixBlendMode: "normal",          
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  description1.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  description1.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  description2.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  description2.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  skills_container.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  skills_container.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  about_me.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  about_me.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+  
+  about_me2.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  about_me2.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
+}
+
+cursor1();
+
 
 function video() {
   let projectBox = document.querySelector(".project-box1");
@@ -7,18 +196,30 @@ function video() {
   let video2 = document.querySelector("#project-box2 video");
   projectBox.addEventListener("mouseenter", function () {
     video.style.display = "block";
+    // projectBox.style.padding = 10 + "px";
+    // projectBox.style.backgroundImage = "none";
+    // projectBox.style.backgroundColor = "black";
   });
 
   projectBox.addEventListener("mouseleave", function () {
     video.style.display = "none";
+    // projectBox.style.padding = 0 + "px";
+    // projectBox.style.backgroundImage = "";
+    // projectBox.style.backgroundColor = "none";
   });
 
   projectBox2.addEventListener("mouseenter", function () {
     video2.style.display = "block";
+    // projectBox2.style.padding = 10 + "px";
+    // projectBox2.style.backgroundImage = "none";
+    // projectBox2.style.backgroundColor = "black";
   });
 
   projectBox2.addEventListener("mouseleave", function () {
     video2.style.display = "none";
+    // projectBox2.style.padding = 0 + "px";
+    // projectBox2.style.backgroundImage = "";
+    // projectBox2.style.backgroundColor = "none";
   });
 }
 video();
@@ -118,33 +319,33 @@ function loaderAnimation() {
     opacity: 0,
     duration: 0.5,
     delay: 0.3,
-    stagger: 0.1
+    stagger: 0.1,
   });
 
   tl.from(".loader-div h2", {
     y: 70,
     opacity: 0,
     duration: 0.5,
-    delay: 0.3
+    delay: 0.3,
   });
 
   tl.to(".loader", {
     opacity: 0,
     duration: 0.2,
-    delay: 2
-  }); 
-  
+    delay: 2,
+  });
+
   tl.from(".home-page", {
-    y: 5,        
+    y: 5,
     delay: 0.3,
-    duration: 2,    
+    duration: 2,
     opacity: 0,
-    ease: "sine.out"
+    ease: "sine.out",
   });
 
   tl.to(".loader", {
-    display: "none"
-  });  
+    display: "none",
+  });
 }
 
 loaderAnimation();
@@ -156,150 +357,144 @@ function scrollTrigger() {
     opacity: 0,
     scrollTrigger: {
       trigger: ".scroller",
-      scroll: "body", 
-      start: "top 80%"     
+      scroller: "body",
+      start: "top 80%"
     }
-  })
+  });
 
   gsap.from(".projects h1", {
-    x: -80, 
-    duration: 1, 
-    opacity: 0, 
+    x: -80,
+    duration: 1,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".projects h1", 
-      scroll: "body",
-      start: "top 70%"      
+      trigger: ".projects h1",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".project-box1", {
-    y: 80, 
-    duration: 1.5, 
-    opacity: 0, 
+    y: 80,
+    duration: 1.5,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".project-box1", 
-      scroll: "body",
-      start: "top 70%"          
+      trigger: ".project-box1",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".description1", {
-    y: 80, 
-    duration: 1.5, 
-    opacity: 0, 
+    y: 80,
+    duration: 1.5,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".description1", 
-      scroll: "body",
-      start: "top 70%"          
+      trigger: ".description1",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
-  
+  });
+
   gsap.from(".project-box3", {
-    y: 80, 
-    duration: 1.5, 
-    opacity: 0, 
+    y: 80,
+    duration: 1.5,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".project-box3", 
-      scroll: "body",
-      start: "top 70%"          
+      trigger: ".project-box3",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".description2", {
-    y: 80, 
-    duration: 1.5, 
-    opacity: 0, 
+    y: 80,
+    duration: 1.5,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".description2", 
-      scroll: "body",
-      start: "top 70%"          
+      trigger: ".description2",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".skills h1", {
-    y: 80, 
-    duration: 1, 
-    opacity: 0, 
+    y: 80,
+    duration: 1,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".skills h1", 
-      scroll: "body",
-      start: "top 75%"      
+      trigger: ".skills h1",
+      scroller: "body",
+      start: "top 75%"
     }
-  })
+  });
 
   gsap.from(".skills-box", {
-    y: 80, 
-    duration: 2, 
+    y: 80,
+    duration: 2,
     opacity: 0,
-    stagger: 0.3, 
+    stagger: 0.3,
     scrollTrigger: {
-      trigger: ".skills-box", 
-      scroll: "body",
-      start: "top 75%"      
+      trigger: ".skills-box",
+      scroller: "body",
+      start: "top 75%"
     }
-  })
+  });
 
   gsap.from(".about-me h1", {
-    y: 80, 
-    duration: 1, 
-    opacity: 0, 
+    y: 80,
+    duration: 1,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".about-me h1", 
-      scroll: "body",
-      start: "top 75%"      
+      trigger: ".about-me h1",
+      scroller: "body",
+      start: "top 75%"
     }
-  })
+  });
 
   gsap.from(".left-box", {
-    x: -80, 
-    duration: 2, 
-    opacity: 0, 
+    x: -80,
+    duration: 2,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".left-box", 
-      scroll: "body",
-      start: "top 70%"      
+      trigger: ".left-box",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".right-top", {
-    x: 80, 
-    duration: 2, 
-    opacity: 0, 
+    x: 80,
+    duration: 2,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".right-top", 
-      scroll: "body",
-      start: "top 70%"      
+      trigger: ".right-top",
+      scroller: "body",
+      start: "top 70%"
     }
-  })
+  });
 
   gsap.from(".right-bottom", {
-    x: 80, 
-    duration: 2, 
-    opacity: 0, 
+    x: 80,
+    duration: 2,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".right-bottom", 
-      scroll: "body",
-      start: "top 95%"      
+      trigger: ".right-bottom",
+      scroller: "body",
+      start: "top 95%"
     }
-  })
+  });
 
   gsap.from(".about-box2-bottom", {
-    y: 80, 
-    duration: 2, 
-    opacity: 0, 
+    y: 80,
+    duration: 2,
+    opacity: 0,
     scrollTrigger: {
-      trigger: ".about-box2-bottom", 
-      scroll: "body",
-      start: "top 75%"      
+      trigger: ".about-box2-bottom",
+      scroller: "body",
+      start: "top 75%"
     }
-  })
+  });
 }
 
 scrollTrigger();
-
-
-
- 
-
-
 

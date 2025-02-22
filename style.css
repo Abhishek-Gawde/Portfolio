@@ -26,6 +26,22 @@ body {
     --font-color: rgba(255, 255, 255, 0.815);
 }
 
+.cursor {
+    height: 20px;
+    width: 20px;    
+    font-size: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    z-index: 9;
+    mix-blend-mode: normal;
+    pointer-events: none;    
+}
+
 .loader {
     height: 100%;
     width: 100%;
@@ -61,6 +77,8 @@ body {
 .loader-div h2 {
     font-size: 7vh;
     color: white;
+    overflow: hidden;
+    letter-spacing: 2px;
 }
 
 
@@ -194,7 +212,15 @@ nav .options {
 
 .heading h1 {
     color: var(--heading);
-    font-size: 6rem;    
+    font-size: 6rem; 
+    z-index: 10;     
+}
+
+.heading h1 span {
+    height: 100%;
+    width: 100%;
+    background-color: red;  
+    z-index: 10;  
 }
 
 .para {
@@ -288,7 +314,7 @@ nav .options {
 .projects h1 {
     color: var(--heading);
     font-size: 4rem; 
-    margin-bottom: 10vh;   
+    margin-bottom: 20vh;   
 }
 
 .project-box {
@@ -304,9 +330,17 @@ nav .options {
     border-radius: 30px;
     background-image: url(/assets/Screenshot\ 2025-02-13\ 192228.png);
     background-position: center;
-    background-size: cover;       
+    background-size: cover; 
+    transition: all ease 0.5s;          
 }
 
+.project-box1, .project-box3 {
+    margin-bottom: 15vh;
+}
+
+.project-box3 {
+    margin-top: 20vh;
+}
 .project-box1 video, .project-box3 video {
     height: 100%;
     width: 100%;
@@ -617,75 +651,17 @@ nav .options {
 footer {
     min-height: 80vh;
     width: 100%;
-    background-color: white;    
-    border-top-left-radius: 70px;
-    border-top-right-radius: 70px;
-    margin-top: 20vh;
+    background-color: rgb(32, 28, 28);
+    margin-top: 25vh;
 }
 
-.footer-nav {
-    height: 10vh;
-    width: 100%;
-    /* background-color: red; */
-    border-top-left-radius: 70px;
-    border-top-right-radius: 70px;
-}
 
-.footer-nav ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.footer-nav ul a {
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.671);
-    text-decoration: none;
-}
 
-.footer-middle {
-    height: 75vh;
-    width: 100%;    
-    display: flex;
-    justify-content: space-between;
-}
 
-.footer-middle-left {
-    height: 100%;
-    width: 45%;    
-}
 
-.footer-middle-left h1 {
-    font-size: 7rem;
-    font-weight: 300;
-    margin: 9vh 0 10vh 17vh;
-    line-height: 0.9;
-}
 
-.footer-middle-left a {
-    color: black;
-    font-size: 1.5rem;
-    margin-left: 17vh;
-}
 
-.footer-middle-right {
-    height: 100%;
-    width: 45%;     
-    position: relative;      
-}
-
-#footer-middle-image {
-    position: absolute;
-    height: 110%;    
-    width: 80%;    
-    background-image: url(/assets/vecteezy_3d-male-character-sitting-on-a-sofa-and-working-on-a-laptop_24785818.png);
-    background-position: center;
-    background-size: cover;
-    top: -100px;
-    left: -40px;
-}
 
 
 
