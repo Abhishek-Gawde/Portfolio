@@ -8,29 +8,27 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link id="change" rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="cursor"></div>
     <div class="loader">
       <div class="loader-div">
-        <h1>Abhishek Gawde's</h1>
-        <h2>Portfolio</h2>
+        <h1>Loading...</h1>
+        <!-- <h2>00</h2> -->
       </div>
     </div>
-    <div class="main">
-      <div class="home-page">
+    <div class="main" data-scroll-container>
+      <div class="home-page" id="homePage" data-scroll-section>
         <nav>
           <h1>AG</h1>
-          <div class="options">
-            <a href="">Home</a>
-            <a href="">Projects</a>
-            <a href="">Skills</a>
-            <a href="">About</a>
+          <div class="options">            
+            <div class="toggle" onclick="changeCss()"><i class="ri-moon-line"></i></div>
           </div>
         </nav>
         <div class="home-page-middle">
@@ -49,7 +47,7 @@
         </div>
       </div>
 
-      <div class="scroller">
+      <div class="scroller" data-scroll-section>
         <div class="moving-text">
           <div class="con">
             <h1>Think</h1>
@@ -84,10 +82,15 @@
         </div>
       </div>
 
-      <div class="projects">
+      <div class="projects" id="project" data-scroll-section>
         <h1>Projects</h1>
         <div class="project-box">
-          <div class="project-box1" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+          <div
+            class="project-box1"
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="2"
+          >
             <video src="/assets/sundown.mp4" autoplay muted loop>Sundown</video>
           </div>
           <div class="description1">
@@ -98,16 +101,22 @@
             </p>
             <div class="button-wrapper">
               <div class="btn">
-                <a href="">View</a>
+                <a href="" target="_blank">View</a>
               </div>
               <div class="btn">
-                <a href="">Github</a>
+                <a href="https://github.com/Abhishek-Gawde/Awaards-Website" target="_blank">Github</a>
               </div>
             </div>
           </div>
         </div>
         <div class="project-box">
-          <div class="project-box3" id="project-box2" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+          <div
+            class="project-box3"
+            id="project-box2"
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="2"
+          >
             <video src="/assets/responsive.mp4" autoplay muted loop>
               Sundown
             </video>
@@ -120,22 +129,33 @@
             </p>
             <div class="button-wrapper">
               <div class="btn">
-                <a href="">View</a>
+                <a href="https://responsive-landing-page-roan.vercel.app/" target="_blank">View</a>
               </div>
               <div class="btn">
-                <a href="">Github</a>
+                <a href="https://github.com/Abhishek-Gawde/responsive-landing-page" target="_blank">Github</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="skills" data-scroll-speed="0.2" data-scroll-direction="vertical">
+      <div
+        class="skills" 
+        id="skill"   
+        data-scroll-section  
+        data-scroll-speed="0.2"
+        data-scroll-direction="vertical"
+      >
         <h1>Skills</h1>
         <div class="skills-container">
           <div class="skills-box" id="skills-box1">
             <h1>Programming Languages</h1>
             <div class="skills-scroller">
+              <div class="skills-con">
+                <h1>Java</h1>
+                <h1>C++</h1>
+                <h1>C</h1>
+              </div>
               <div class="skills-con">
                 <h1>Java</h1>
                 <h1>C++</h1>
@@ -216,7 +236,7 @@
         </div>
       </div>
 
-      <div class="about-me">
+      <div class="about-me" id="about" data-scroll-section>
         <h1>About</h1>
         <div class="about-box">
           <div class="about-inside-box">
@@ -265,7 +285,19 @@
         </div>
       </div>
 
-      <footer></footer>
+      <footer data-scroll-section>        
+        <h1>Let's Connect</h1>
+        <div class="footer-box">
+          <a href="" id="one"><i class="ri-github-fill"></i></a>
+          <a href="" id="two"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="" id="three"><i class="ri-twitter-x-fill"></i></a>
+          <a href="" id="four"><i class="ri-instagram-fill"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>Transforming ideas into reality through code. Looking forward to new challenges and opportunities!</p>
+        </div>
+      </footer>
+       
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -281,6 +313,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>       
     <script src="script.js"></script>
   </body>
 </html>

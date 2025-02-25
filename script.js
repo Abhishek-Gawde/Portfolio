@@ -32,7 +32,8 @@ ScrollTrigger.refresh();
 
 }
 
-locomotive();
+locomotive(); 
+
 
 let tl = gsap.timeline();
 let main = document.querySelector(".main");
@@ -47,12 +48,47 @@ let description1 = document.querySelector(".description1");
 let skills_container = document.querySelector(".skills-container");
 let about_me = document.querySelector(".about-box");
 let about_me2 = document.querySelector(".about-box2");
+let footer = document.querySelector("footer");
+
+function shery1() {
+  Shery.makeMagnet(".options a" , {  
+    ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+    duration: 1,
+  });
+  
+  Shery.makeMagnet(".projects h1" , {  
+    ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+    duration: 1,
+  });
+  
+  Shery.makeMagnet(".skills h1" , {  
+    ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+    duration: 1,
+  });
+  
+  Shery.makeMagnet(".about-me h1" , {  
+    ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+    duration: 1,
+  });  
+
+}
+shery1();
+
+function changeCss() {
+  let link = document.getElementById("change");
+
+  if(link.getAttribute("href") === "style.css") {
+    link.setAttribute("href", "style1.css");
+  } else {
+    link.setAttribute("href", "style.css");
+  }
+}
 
 function cursor1() {
   main.addEventListener("mousemove", function(dets) {
     gsap.to(cursor, {
         x: dets.x,
-        y: dets.y,
+        y: dets.y,        
         duration: 1        
     })
   })
@@ -204,22 +240,8 @@ function cursor1() {
       ease: Power4
     })
   })
+   
   
-  about_me2.addEventListener("mouseenter", function() {
-    gsap.to(cursor, {  
-      mixBlendMode: "difference",   
-      scale: 2,    
-      ease: Power4
-    })  
-  })
-  
-  about_me2.addEventListener("mouseleave", function() {
-    gsap.to(cursor, {  
-      mixBlendMode: "normal",   
-      scale: 1,    
-      ease: Power4
-    })
-  })
 }
 
 cursor1();
@@ -265,15 +287,16 @@ function scrollerStart() {
     let skill1 = document.querySelector("#skills-box1");
     let h1 = document.querySelector("#skills-box1 h1");
     let scroller = document.querySelector("#skills-box1 .skills-scroller");
+    let scroller_h1 = document.querySelector("#skills-box1 .skills-scroller h1");
 
     skill1.addEventListener("mouseenter", function () {
       h1.style.display = "none";
-      scroller.style.opacity = "1";
+      scroller.style.opacity = "1";                  
     });
 
     skill1.addEventListener("mouseleave", function () {
       h1.style.display = "block";
-      scroller.style.opacity = "0";
+      scroller.style.opacity = "0";     
     });
   }
   function scroller1() {
@@ -367,14 +390,14 @@ function loaderAnimation() {
 
   tl.to(".loader", {
     opacity: 0,
-    duration: 0.2,
+    duration: 0.4,
     delay: 1.5,
-  });
+  }); 
 
   tl.from(".home-page", {
-    y: 5,
-    delay: 0.1,
-    duration: 2,
+    y: 10, 
+    delay: -0.4,   
+    duration: 1,
     opacity: 0,
     ease: "sine.out",
   });
@@ -382,6 +405,8 @@ function loaderAnimation() {
   tl.to(".loader", {
     display: "none",
   });
+
+  
 }
 
 loaderAnimation();
@@ -494,7 +519,7 @@ function scrollTrigger() {
     scrollTrigger: {
       trigger: ".left-box",
       scroller: ".main",
-      start: "top 70%"
+      start: "top 70%"      
     }
   });
 
@@ -505,7 +530,7 @@ function scrollTrigger() {
     scrollTrigger: {
       trigger: ".right-top",
       scroller: ".main",
-      start: "top 70%"
+      start: "top 70%"      
     }
   });
 
@@ -516,7 +541,7 @@ function scrollTrigger() {
     scrollTrigger: {
       trigger: ".right-bottom",
       scroller: ".main",
-      start: "top 95%"
+      start: "top 95%"      
     }
   });
 
@@ -527,10 +552,13 @@ function scrollTrigger() {
     scrollTrigger: {
       trigger: ".about-box2-bottom",
       scroller: ".main",
-      start: "top 75%"
+      start: "top 75%"      
     }
   });
 }
 
 scrollTrigger();
+
+// Ensure DOM is loaded before execution
+
 
