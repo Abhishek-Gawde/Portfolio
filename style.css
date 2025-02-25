@@ -11,6 +11,7 @@ html, body {
 
 body {
     background-color: #000000;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .main {
@@ -41,6 +42,8 @@ body {
     mix-blend-mode: normal;
     pointer-events: none;    
 }
+
+/* loader part  */
 
 .loader {
     height: 100%;
@@ -81,6 +84,8 @@ body {
     letter-spacing: 2px;
 }
 
+/* home-page part  */
+
 
 .home-page {
     min-height: 100vh;
@@ -99,7 +104,7 @@ nav {
 }
 
 nav h1 {
-    color: white;
+    color: rgba(255, 255, 255, 0.933);
     font-size: 3rem;   
     position: relative; 
     z-index: 1; 
@@ -146,7 +151,7 @@ nav .options {
 
 .toggle i {
     font-size: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.933);
 }
 
 .options .toggle i:hover {
@@ -247,6 +252,8 @@ nav .options {
     font-size: 19px; 
 }
 
+/* scroller  */
+
 .scroller {
     height: 40vh; 
     width: 100%;    
@@ -313,6 +320,8 @@ nav .options {
         transform: translateX(-100%);
     }
 }
+
+/* projects part  */
 
 .projects {
     min-height: 120vh;
@@ -699,8 +708,7 @@ footer h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.329);
+    gap: 20px;    
 }
 
 .footer-box a {
@@ -717,13 +725,14 @@ footer h1 {
     color: #0A66C2;
 }
 
-#three:hover {
-    color: #000000;
+footer h4 {
+    color: black;
+    text-align: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.329);
+    padding-bottom: 2vh;
 }
 
-#four:hover {
-    color: #FD1D1D;
-}
+
 
 .footer-bottom {
     height: 10vh;
@@ -738,6 +747,359 @@ footer h1 {
     color: black;
     font-size: 1.3rem;
     font-weight: 200;   
+}
+
+/* responsive part  */
+
+@media (max-width: 500px) {
+
+    .cursor {
+        display: none;
+    }
+
+    body {
+        height: 100%;
+        width: 500px;
+    }
+
+    /* loader part  */
+
+    .loader {
+        height: 100vh;
+        width: 50%;           
+    }   
+    
+    
+    .loader-div h1 {
+        font-size: 11vh;            
+    }
+
+    /* home-page part  */
+
+    .home-page {
+        min-height: 100vh;
+        width: 100%;
+        background-color: var(--background);
+    }
+    
+    nav {
+        height: 3vh;
+        width: 100%;         
+    }
+    
+    nav h1 {        
+        font-size: 2rem;     
+    }
+    
+    nav h1:hover {
+        scale: 1.1;
+    } 
+    
+    nav h1:hover::after {
+        transform: translate(-50%, -50%) scale(1.5);        
+    }
+    
+    
+    .options .toggle {
+        height: 3vh;
+        width: 3vh;  
+        
+    }
+    
+    .toggle i {
+        font-size: 2rem;        
+    }
+    
+    .options .toggle i:hover {        
+        scale: 1.1;
+    }   
+    
+    .options .toggle:hover::after {
+        transform: translate(-50%, -50%) scale(1.5);        
+    }
+    
+    
+    .home-page-middle {
+        height: 95vh;
+        width: 100%;        
+    }
+    
+    .img {
+        height: 70%;
+        width: 70%;    
+        margin-bottom: 80px;                        
+    }
+    
+    .heading {    
+        top: 5%;    
+    }
+    
+    .heading h2 {
+        font-size: 2.5rem;
+    }
+    
+    .heading h1 {        
+        font-size: 3rem;              
+    }
+    
+    
+    .para {
+        height: 15%;
+        width: 80%;       
+        bottom: 0%;
+        left: 8%;          
+    }
+    
+    .para p {        
+        font-size: 15px; 
+    }
+
+    /* scroller  */
+
+    .scroller {
+        height: 40vh; 
+        width: 100%;         
+    }
+    
+    
+    .moving-text h1 {        
+        font-size: 4vw;                     
+    }
+    
+    .con {          
+        gap: 5px;     
+    }
+    
+    .con h1 {       
+        letter-spacing: 1px;
+    }
+    
+    /* projects  */
+
+    .projects {
+        min-height: 100vh;
+        width: 100%;
+    }
+    
+    .projects h1 {        
+        font-size: 3rem;           
+    }
+    
+    .project-box {
+        margin-top: 10vh;           
+    }
+    
+    .project-box1, .project-box3 {
+        height: 50vh;
+        width: 100%;      
+        border-radius: 30px;                 
+    }
+    
+    .project-box1, .project-box3 {
+        margin-bottom: 10vh;
+    }
+    
+    .project-box3 {
+        margin-top: 8vh;
+    }    
+    
+    .description1, .description2 {
+        height: 40%;
+        width: 85%;     
+        margin-top: 1.5vh; 
+        margin-left: 35px;     
+    }
+    
+    .description1 h2, .description2 h2 {
+        font-size: 2rem;
+        margin-bottom: 1vh;      
+    }
+    
+    .description1 p, .description2 p {
+        font-size: 1.2rem;  
+        letter-spacing: 0px; 
+        margin-bottom: 1vh;       
+    }
+    
+    .button-wrapper {
+        height: 50px;
+        width: 100%; 
+    }
+    
+    .description1 .btn, .description2 .btn {    
+        height: 20px;
+        width: 60px;
+        border-radius: 32px;       
+    }
+
+    /* skills part  */
+
+    .skills {
+        min-height: 82vh;
+        width: 100%; 
+        margin: 2vh 0 0;           
+    }
+    
+    .skills h1 {      
+        font-size: 3rem;         
+    }
+    
+    .skills-container {
+        height: 60vh;
+        width: 100%;   
+        margin-top: 20vh;        
+    }
+    
+    .skills-box h1 {
+        width: 50%;
+        font-size: 2rem;
+        margin-left: 2vh;
+    }
+    
+    .skills-scroller {           
+        opacity: 1; 
+    }
+    
+    .skills-scroller h1 {
+        font-size: 2.1rem;
+        margin-right: 5vh;             
+    }
+
+    /* about part  */
+
+    .about-me h1 {
+        font-size: 3rem;
+        margin-top: 15vh;
+    }
+
+    .about-box {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 15vh 0 0 0;
+    }
+
+    .about-inside-box {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .left-box {
+        width: 90%;
+        height: auto;
+        margin-bottom: 2vh;
+        padding: 10px 0;
+    }
+
+    .left-box .img1 {
+        height: 70vw;
+        width: 70%;
+        margin-bottom: 3vh;
+    }
+
+    .left-box #btn {
+        height: 35px;
+        width: 100px;
+    }
+
+    .right-box {
+        width: 92%;
+    }
+
+    .right-top,
+    .right-bottom {
+        height: auto;
+        padding: 5vh 2vh;
+        text-align: center;
+    }
+
+    .right-top h3 {
+        font-size: 2rem;
+    }
+
+    .right-top p,
+    .right-bottom p {
+        font-size: 1rem;
+        margin: 4vh 0 4vh 2vh;
+        letter-spacing: 1px;
+    }
+
+    .about-box2 {
+        height: auto;
+        padding: 5vh 0;
+    }
+
+    .about-box2-bottom {
+        width: 90%;
+        padding: 5vh 0;
+    }
+
+    .about-box2-bottom h4 {
+        font-size: 1.8rem;
+    }
+
+    .about-box2-bottom h3 {
+        font-size: 2.5rem;
+    }
+
+    .about-box2-bottom p {
+        font-size: 1rem;
+        margin: 4vh 2vh;
+    }
+
+    .about-box2-bottom #btn2 {
+        margin: 6vh auto;
+        height: 35px;
+        width: 100px;
+    }
+
+    /* footer part  */
+
+    footer {
+        min-height: auto;
+        padding-top: 4vh;
+        margin-top: 10vh;
+        border-radius: 10% 10% 0 0;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 2vh 0;
+    }
+
+    .footer-nav a {
+        font-size: 1.2rem;
+    }
+
+    footer h1 {
+        font-size: 2rem;
+        margin-top: 5vh;
+    }
+
+    .footer-box {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 3vh 0;
+        gap: 15px;
+    }
+
+    .footer-box a {
+        font-size: 1.2rem;
+    }
+
+    .footer-bottom {
+        height: auto;
+        margin-top: 3vh;
+        padding: 2vh 5%;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 1rem;
+    }    
 }
 
 

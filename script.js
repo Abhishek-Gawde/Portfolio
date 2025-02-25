@@ -77,11 +77,11 @@ shery1();
 function changeCss() {
   let link = document.getElementById("change");
 
-  if(link.getAttribute("href") === "style.css") {
-    link.setAttribute("href", "style1.css");
-  } else {
-    link.setAttribute("href", "style.css");
-  }
+
+  gsap.to("body", { rotationY: -90, duration: 0.6, ease: "power2.in", onComplete: () => {
+    link.setAttribute("href", link.getAttribute("href") === "style.css" ? "style1.css" : "style.css");
+    gsap.to("body", { rotationY: 0, duration: 0.6, ease: "power2.out" });
+}});
 }
 
 function cursor1() {
