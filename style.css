@@ -542,6 +542,7 @@ nav .options {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition: all linear 0.1s;
 }
 
 .left-box .img1 {
@@ -578,10 +579,11 @@ nav .options {
 .right-top {
   height: 50%;
   width: 100%;
-  background-color: var(--background2);
+  background-color: var(--background2); 
   margin-bottom: 2vh;
   border-radius: 20px;
   padding-top: 8px;
+  transition: all linear 0.1s;
 }
 
 .right-top h3 {
@@ -607,6 +609,7 @@ nav .options {
   background-color: var(--background2);
   border-radius: 20px;
   padding: 9vh 0 0 6vh;
+  transition: all linear 0.1s;
 }
 
 .right-bottom p {
@@ -632,6 +635,7 @@ nav .options {
   width: 75%;
   border-radius: 20px;
   background-color: var(--background2);
+  transition: all linear 0.1s;
 }
 
 .about-box2-bottom h4 {
@@ -760,7 +764,7 @@ footer h4 {
 
   body {
     height: 100%;
-    width: 420px;
+    width: 100vw;
   }
 
   /* loader part  */
@@ -787,11 +791,11 @@ footer h4 {
   }
 
   nav h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   nav h1:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.933);
     scale: 1;
   }
 
@@ -809,7 +813,7 @@ footer h4 {
   }
 
   .options .toggle i:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.933);
     scale: 1;
   }
 
@@ -823,7 +827,7 @@ footer h4 {
   }
 
   .img {
-    height: 80%;
+    height: 70%;
     width: 100%;
     margin-bottom: 120px;
     margin-top: 0vh;
@@ -838,7 +842,7 @@ footer h4 {
   }
 
   .heading h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .para {
@@ -849,7 +853,7 @@ footer h4 {
   }
 
   .para p {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   /* scroller  */
@@ -880,6 +884,7 @@ footer h4 {
   }
 
   .projects h1 {
+    text-align: center;
     font-size: 3rem;
     margin-bottom: 10vh;
   }
@@ -959,7 +964,7 @@ footer h4 {
 
   .skills-box h1 {
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 2vh;
   }
 
@@ -996,6 +1001,7 @@ footer h4 {
     width: 85%;
     height: auto;
     margin-bottom: 2vh;
+    margin-left: 2vh;
     padding: 10px 0;
   }
 
@@ -1022,7 +1028,7 @@ footer h4 {
   }
 
   .right-top h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .right-top p,
@@ -1039,15 +1045,15 @@ footer h4 {
 
   .about-box2-bottom {
     width: 90%;
-    padding: 4vh 0;
+    padding: 2vh 0;
   }
 
   .about-box2-bottom h4 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .about-box2-bottom h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .about-box2-bottom p {
@@ -1065,24 +1071,13 @@ footer h4 {
 
   footer {
     min-height: auto;
-    padding-top: 4vh;
+    padding-top: 2vh;
     margin-top: 10vh;
     border-radius: 10% 10% 0 0;
   }
 
-  .footer-nav {
-    flex-direction: column;
-    height: auto;
-    gap: 10px;
-    padding: 2vh 0;
-  }
-
-  .footer-nav a {
-    font-size: 1.2rem;
-  }
-
   footer h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-top: 5vh;
   }
 
@@ -1097,14 +1092,18 @@ footer h4 {
     font-size: 1.2rem;
   }
 
+  footer h4 {
+    font-size: 0.7rem;
+  }
+
   .footer-bottom {
     height: auto;
     margin-top: 3vh;
-    padding: 2vh 5%;
+    padding: 1vh 5%;
     text-align: center;
   }
 
   .footer-bottom p {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }

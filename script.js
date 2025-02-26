@@ -49,9 +49,14 @@ let skills_container = document.querySelector(".skills-container");
 let about_me = document.querySelector(".about-box");
 let about_me2 = document.querySelector(".about-box2");
 let footer = document.querySelector("footer");
+let leftBox = document.querySelector(".about-inside-box .left-box");
+let rightTop = document.querySelector(".right-box .right-top");
+let rightBottom = document.querySelector(".right-box .right-bottom");
+let aboutBox2 = document.querySelector(".about-box2 .about-box2-bottom");
+
 
 function shery1() {
-  Shery.makeMagnet(".options a" , {  
+  Shery.makeMagnet(".options .toggle" , {  
     ease: "cubic-bezier(0.22, 1, 0.36, 1)",
     duration: 1,
   });
@@ -240,6 +245,22 @@ function cursor1() {
       ease: Power4
     })
   })
+
+  about_me2.addEventListener("mouseenter", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "difference",   
+      scale: 2,    
+      ease: Power4
+    })  
+  })
+  
+  about_me2.addEventListener("mouseleave", function() {
+    gsap.to(cursor, {  
+      mixBlendMode: "normal",   
+      scale: 1,    
+      ease: Power4
+    })
+  })
    
   
 }
@@ -381,12 +402,6 @@ function loaderAnimation() {
     stagger: 0.1,
   });
 
-  tl.from(".loader-div h2", {
-    y: 70,
-    opacity: 0,
-    duration: 0.5,
-    delay: 0.3,
-  });
 
   tl.to(".loader", {
     opacity: 0,
@@ -559,6 +574,40 @@ function scrollTrigger() {
 
 scrollTrigger();
 
-// Ensure DOM is loaded before execution
+leftBox.addEventListener("mouseenter", function() {
+  leftBox.style.borderRadius = "10px";
+})
+
+leftBox.addEventListener("mouseleave", function() {
+  leftBox.style.borderRadius = "20px";
+})
+
+rightTop.addEventListener("mouseenter", function() {
+  rightTop.style.borderRadius = "10px";
+})
+
+rightTop.addEventListener("mouseleave", function() {
+  rightTop.style.borderRadius = "20px";
+})
+
+rightBottom.addEventListener("mouseenter", function() {
+  rightBottom.style.borderRadius = "10px";
+})
+
+rightBottom.addEventListener("mouseleave", function() {
+  rightBottom.style.borderRadius = "20px";
+})
+
+aboutBox2.addEventListener("mouseenter", function() {
+  aboutBox2.style.borderRadius = "10px";
+})
+
+aboutBox2.addEventListener("mouseleave", function() {
+  aboutBox2.style.borderRadius = "20px";
+})
+
+
+
+
 
 
