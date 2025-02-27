@@ -758,6 +758,10 @@ footer h4 {
 
 /* responsive part  */
 @media (max-width: 450px) {
+  .hover-effect {
+    pointer-events: none; /* Disables hover effects */
+  }
+  
   .cursor {
     display: none;
   }

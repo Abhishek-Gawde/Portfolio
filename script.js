@@ -56,6 +56,10 @@ let aboutBox2 = document.querySelector(".about-box2 .about-box2-bottom");
 
 
 function shery1() {
+  if(window.innerWidth <= 450) {
+    return;
+  }
+
   Shery.makeMagnet(".options .toggle" , {  
     ease: "cubic-bezier(0.22, 1, 0.36, 1)",
     duration: 1,
@@ -74,7 +78,7 @@ function shery1() {
   Shery.makeMagnet(".about-me h1" , {  
     ease: "cubic-bezier(0.22, 1, 0.36, 1)",
     duration: 1,
-  });  
+  });
 
 }
 shery1();
@@ -304,6 +308,9 @@ function video() {
 video();
 
 function scrollerStart() {
+  if(window.innerWidth <= 450) {
+    return;
+  }
   function scroller() {
     let skill1 = document.querySelector("#skills-box1");
     let h1 = document.querySelector("#skills-box1 h1");
