@@ -624,6 +624,9 @@ nav .options {
     border-radius: 20px;
     background-color: var(--background2);
     transition: all linear 0.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-box2-bottom h4 {
@@ -654,7 +657,7 @@ nav .options {
 .about-box2-bottom #btn2 {
     height: 30px;
     width: 90px;
-    margin: 12vh 65vh 2vh 65vh;
+    margin-top: 11vh;
     border-radius: 32px;    
     background-color: var(--button); 
     display: flex;
@@ -748,9 +751,7 @@ footer h4 {
 /* responsive part  */
 
 @media (max-width: 450px) {
-  .hover-effect {
-    pointer-events: none; /* Disables hover effects */
-  }
+  
     .cursor {
       display: none;
     }
